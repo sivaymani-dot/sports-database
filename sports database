@@ -1,0 +1,114 @@
+create database sports2;
+use sports2;
+CREATE TABLE KABBADI (
+   Player_ID INT PRIMARY KEY,
+   Player_Name VARCHAR(50) NOT NULL,
+   Age INT,
+   Achivements VARCHAR(50)
+   );
+   CREATE TABLE CRICKET (
+   Player_ID INT PRIMARY KEY,
+   Player_Name VARCHAR(50) NOT NULL,
+   Age INT,
+   Achivements VARCHAR(50)
+);
+CREATE TABLE TENNIS (
+   Player_ID INT PRIMARY KEY,
+   Player_Name VARCHAR(50) NOT NULL,
+   Age INT,
+   Achivements VARCHAR(50)
+);
+CREATE TABLE BATMINTON (
+   Player_ID INT PRIMARY KEY,
+   Player_Name VARCHAR(50) NOT NULL,
+   Age INT,
+   Achivements VARCHAR(50)
+);
+CREATE TABLE LONGJUMP (
+   Player_ID INT PRIMARY KEY,
+   Player_Name VARCHAR(50) NOT NULL,
+   Age INT,
+   Achivements VARCHAR(50)
+);
+
+INSERT INTO KABBADI
+VALUES
+(1, 'Pardeep Narwal', 27, 'Best Raider'),
+(2, 'Manjeet Chhillar', 38, 'Best Defender'),
+(3, 'Rahul Chaudhari', 31, 'Best Raider'),
+(4, 'Deepak Hooda', 30, 'Pro Kabaddi Winner'),
+(5, 'Fazel Atrachali', 32, 'Best Defender'),
+(6, 'Naveen Kumar', 25, 'Best Raider'),
+(7, 'Pawan Sehrawat', 28, 'Best Raider'),
+(8, 'Surjeet Singh', 34, 'Best Defender'),
+(9, 'Vikash Khandola', 27, 'Rising Player'),
+(10, 'Sandeep Narwal', 32, 'Best All-Rounder');
+SELECT * FROM KABBADI;
+INSERT INTO CRICKET
+VALUES
+(1, 'Virat Kohli', 37, 'World Cup Winner'),
+(2, 'Rohit Sharma', 39, 'World Cup Winner'),
+(3, 'MS Dhoni', 45, 'World Cup Winner'),
+(4, 'Sachin Tendulkar', 53, 'Bharat Ratna'),
+(5, 'Jasprit Bumrah', 32, 'World Cup Winner'),
+(6, 'Ravindra Jadeja', 37, 'World Cup Winner'),
+(7, 'Hardik Pandya', 33, 'World Cup Winner'),
+(8, 'KL Rahul', 34, 'IPL Winner'),
+(9, 'Shubman Gill', 27, 'Champions Trophy Winner'),
+(10, 'Rishabh Pant', 28, 'World Cup Winner');
+SELECT * FROM CRICKET;
+INSERT INTO TENNIS
+VALUES
+(1, 'Novak Djokovic', 39, 'Grand Slam Winner'),
+(2, 'Rafael Nadal', 40, 'Grand Slam Winner'),
+(3, 'Roger Federer', 45, 'Grand Slam Winner'),
+(4, 'Carlos Alcaraz', 23, 'Grand Slam Winner'),
+(5, 'Jannik Sinner', 25, 'Grand Slam Winner'),
+(6, 'Daniil Medvedev', 30, 'Grand Slam Winner'),
+(7, 'Alexander Zverev', 29, 'Olympic Gold Medal'),
+(8, 'Coco Gauff', 22, 'Grand Slam Winner'),
+(9, 'Iga Swiatek', 25, 'Grand Slam Winner'),
+(10, 'Serena Williams', 44, 'Grand Slam Winner');
+SELECT * FROM TENNIS;
+INSERT INTO BATMINTON
+VALUES
+(1, 'P. V. Sindhu', 31, 'Olympic Silver Medal'),
+(2, 'Saina Nehwal', 36, 'Olympic Bronze Medal'),
+(3, 'Lakshya Sen', 25, 'Commonwealth Gold'),
+(4, 'Kidambi Srikanth', 33, 'World Championship Silver'),
+(5, 'Prakash Padukone', 71, 'All England Champion'),
+(6, 'Vimal Kumar', 51, 'National Champion'),
+(7, 'Lee Chong Wei', 44, 'Olympic Silver Medal'),
+(8, 'Lin Dan', 42, 'Olympic Gold Medal'),
+(9, 'Carolina Marin', 33, 'Olympic Gold Medal'),
+(10, 'Viktor Axelsen', 32, 'Olympic Gold Medal');
+SELECT * FROM BATMINTON;
+INSERT INTO LONGJUMP
+VALUES
+(1, 'Mike Powell', 62, 'World Record'),
+(2, 'Bob Beamon', 79, 'Olympic Gold Medal'),
+(3, 'Carl Lewis', 65, 'Olympic Gold Medal'),
+(4, 'Juan Miguel Echevarria', 27, 'World Championship Silver'),
+(5, 'Miltiadis Tentoglou', 28, 'Olympic Gold Medal'),
+(6, 'Iván Pedroso', 53, 'Olympic Gold Medal'),
+(7, 'Dwight Phillips', 48, 'World Champion'),
+(8, 'Greg Rutherford', 39, 'Olympic Gold Medal'),
+(9, 'Arnie Robinson', 76, 'Olympic Gold Medal'),
+(10, 'Luvo Manyonga', 34, 'Olympic Silver Medal');
+SELECT * FROM LONGJUMP;
+
+CREATE VIEW game1 AS
+SELECT Player_Name,Achivements
+FROM KABBADI Where Age='32';
+CREATE VIEW game2 AS
+SELECT Player_Name,Achivements
+FROM CRICKET Where Age='32';
+CREATE VIEW game3 AS
+SELECT Player_Name,Achivements
+FROM TENNIS Where Age='32';
+CREATE VIEW game4 AS
+SELECT Player_Name,Achivements
+FROM BATMINTON Where Age='32';
+CREATE VIEW game5 AS
+SELECT Player_Name,Achivements
+FROM LONGJUMP Where Age='32';
